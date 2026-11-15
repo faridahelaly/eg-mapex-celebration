@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>35% MAPEx — an all-time low | October 2026</title>
+<style>
+:root{--ink:#112b43;--navy:#0a2941;--deep:#061e30;--teal:#086f62;--mint:#b8ead4;--gold:#f2c56d;--paper:#f5f4ee;--muted:#526a76;--line:#dce4df}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Aptos","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{overflow:hidden}
+.wrap{width:min(1180px,calc(100% - 80px));margin:auto}
+.hero{position:relative;overflow:hidden;background:var(--deep);color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 82% 48%,#155c5b 0,transparent 42%),linear-gradient(115deg,#061e30 10%,#0b3748 100%);pointer-events:none}
+.hero:after{content:"";position:absolute;width:570px;height:570px;right:-130px;top:-270px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 70px #ffffff08,0 0 0 140px #ffffff06;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.topbar{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #ffffff30;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:12px;letter-spacing:.08em}
+.brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid #b8ead477;border-radius:50%;color:var(--mint);font-size:11px}
+.topbar-meta{color:#c6ddd9;text-align:right}
+.hero-body{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px;min-height:470px;padding:64px 0 72px}
+h1,h2,h3,p{margin-top:0}
+.hero-line{margin:0 0 16px;color:#d4f3e5;font-size:clamp(19px,2.1vw,28px);font-weight:750;letter-spacing:-.02em;white-space:nowrap}
+h1{margin-bottom:20px;color:var(--gold);font-size:clamp(54px,6.6vw,88px);font-weight:850;line-height:.98;letter-spacing:-.055em}
+.hero-subtitle{display:block;margin-top:12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,3vw,39px);font-weight:400;letter-spacing:-.03em;text-transform:none}
+.hero-copy>p:last-child{max-width:475px;margin:0;color:#d4e5e2;font-size:18px;line-height:1.6}
+.hero-copy strong{color:#fff}
+.record{position:relative;display:flex;align-items:center;justify-content:center;min-height:330px}
+.record-ring{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:320px;height:320px;border:9px solid var(--gold);border-radius:50%;background:radial-gradient(circle,#1d766e,#0d4c50 70%);box-shadow:0 0 0 10px #d5f4df1a,0 24px 80px #001c2860;text-align:center}
+.record-label{font-size:18px;font-weight:800;letter-spacing:.1em;color:#d3f0e2;text-transform:uppercase}
+.record-number{font-size:clamp(100px,10vw,138px);font-weight:800;line-height:.9;letter-spacing:-.06em;color:#fff}
+.record-number span{margin-left:3px;font-size:.43em;letter-spacing:-.04em;color:var(--mint)}
+.record-date{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e5f4ed}
+.ribbon{background:var(--gold);color:#243a36}
+.ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.ribbon span:last-child{text-align:right}
+.section{padding:90px 0}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
+.section-kicker{margin:0 0 12px;color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h2{margin-bottom:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(35px,4vw,48px);font-weight:400;line-height:1.08;letter-spacing:-.035em;color:var(--navy)}
+.section-intro{max-width:340px;margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.overview{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(270px,.85fr);gap:22px}
+.chart-card,.impact{border-radius:16px}
+.chart-card{min-width:0;margin:0;padding:32px;background:#fff;border:1px solid var(--line)}
+.card-top{display:flex;justify-content:space-between;align-items:start;gap:20px}
+.card-title{margin:0;color:var(--navy);font-size:20px;font-weight:750}
+.card-tag{color:var(--teal);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;text-align:right}
+.chart{margin-top:42px}
+.plot{position:relative;height:160px;margin:0 18px 0 37px}
+.plot svg{display:block;width:100%;height:100%;overflow:visible}
+.scale{position:absolute;top:-6px;bottom:-6px;left:-37px;display:flex;flex-direction:column;justify-content:space-between;font-size:12px;color:#536b75}
+.point{position:absolute;left:var(--x);top:var(--y);width:10px;height:10px;transform:translate(-50%,-50%);border:2px solid #fff;border-radius:50%;background:#16756d;box-shadow:0 0 0 2px #16756d}
+.point .value{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:16px;font-weight:800;color:var(--navy);white-space:nowrap}
+.point.current{width:40px;height:40px;border:0;background:transparent;box-shadow:none}
+.point.current:before{content:"★";display:block;color:#c5740e;font-size:40px;line-height:40px;text-shadow:0 1px 3px #fff}
+.point.current .value{bottom:38px;color:#9c5700;font-size:20px}
+.periods{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto auto;margin:20px 18px 0 37px;text-align:center;font-size:12px;font-weight:700;line-height:1.35;color:#536b75}
+.periods span{min-width:0}.periods .fiscal{grid-column:4 / 6;grid-row:1}.periods .quarter{grid-column:4;grid-row:2;margin-top:5px}.periods .october{grid-column:5;grid-row:2;margin-top:5px;color:#9c5700;font-size:14px;font-weight:800;white-space:nowrap}
+.impact{display:flex;flex-direction:column;padding:32px;background:#0d5c51;color:white}
+.impact .section-kicker{display:inline-block;margin-bottom:16px;padding:7px 10px;border:1px solid #b9e8d45c;border-radius:99px;color:#d7f2e4}.impact h3{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:400}
+.kpis{display:grid;gap:10px;margin-top:24px}
+.kpi{display:flex;flex-direction:column;justify-content:center;min-height:100px;padding:16px 18px;border:1px solid #ffffff24;border-radius:10px;background:#ffffff0b}
+.kpi strong{display:block;color:#fff;font-size:40px;line-height:1;font-weight:750;letter-spacing:-.04em}
+.kpi span{display:block;margin-top:7px;color:#d6eee3;font-size:14px;line-height:1.3}
+.interventions{padding-top:0}
+.lever-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.lever{display:flex;flex-direction:column;gap:26px;min-height:172px;padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.lever-number{display:flex;align-items:center;justify-content:space-between;color:#617b79;font-size:11px;font-weight:800;letter-spacing:.12em}
+.lever-number>span:first-child{order:2}
+.lever-icon{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:#e8f4ec;color:var(--teal)}
+.lever-icon svg{width:20px;height:20px}
+.lever h3{margin:0;color:var(--navy);font-size:22px;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+.thanks{padding:58px 0;background:#e4eee6}
+.thanks h2{max-width:850px;font-size:clamp(32px,3.8vw,46px)}
+.thanks h2 em{color:var(--teal);font-style:italic}
+.thanks p{margin:18px 0 0;color:#506c66;font-size:15px;line-height:1.6}
+footer{background:var(--deep);color:#b9d0ce}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:25px 0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:800px){
+ .wrap{width:min(100% - 48px,1180px)}
+ .hero-body{gap:20px;min-height:0;padding:60px 0}
+ .record-ring{width:250px;height:250px;gap:10px}.record-label{font-size:16px}.record-number{font-size:100px}
+ .section{padding:70px 0}.interventions{padding-top:0}
+ .overview{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}
+ .lever{min-height:166px;padding:22px}.lever h3{font-size:20px}
+}
+@media(max-width:600px){
+ .wrap{width:calc(100% - 40px)}.topbar{min-height:68px;font-size:10px}.brand-mark{width:30px;height:30px}
+ .hero-body{grid-template-columns:1fr;gap:34px;padding:52px 0 48px}.hero-line{font-size:clamp(18px,5vw,25px)}h1{font-size:clamp(52px,11vw,70px)}.hero-copy>p:last-child{font-size:16px}.record{min-height:0}.record-ring{width:242px;height:242px;border-width:8px}.record-number{font-size:100px}
+ .ribbon .wrap{font-size:10px;line-height:1.5}.section{padding:58px 0}.interventions{padding-top:0}
+ .section-heading{display:block;margin-bottom:25px}.section-intro{margin-top:15px}
+ .chart-card,.impact{padding:24px 20px}.chart{margin-top:44px}.plot{height:140px;margin-right:10px}.periods{margin-right:10px;font-size:10px}.periods .october{font-size:11px}.point .value{font-size:14px}.point.current .value{font-size:18px}
+ .lever-grid{grid-template-columns:1fr;gap:10px}.lever{min-height:0;display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:16px;padding:16px 18px}.lever-number{display:contents}.lever-icon{grid-column:1;grid-row:1}.lever h3{grid-column:2;grid-row:1}.lever-number>span:first-child{grid-column:3;grid-row:1}
+ .thanks{padding:46px 0}
+}
+@media(max-width:360px){.topbar-meta{max-width:115px}.chart-card{padding-right:14px;padding-left:14px}.periods{font-size:9px}.kpi strong{font-size:38px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+ @page{margin:10mm}body{background:#fff}.hero,.ribbon,.impact,.thanks,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.section{padding:35px 0}.interventions{padding-top:0}.hero-body{min-height:0;padding:30px 0}.record-ring{width:230px;height:230px}.record-number{font-size:90px}.overview,.lever-grid,.thanks{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<main>
+ <header class="hero">
+  <div class="wrap">
+   <div class="topbar"><div class="brand"><span class="brand-mark">EG</span><span>MAPEx celebration</span></div><div class="topbar-meta">FY26/27 &nbsp; / &nbsp; October 2026</div></div>
+   <div class="hero-body">
+    <div class="hero-copy">
+     <p class="hero-line">EG MAPEx is in the 30s!</p>
+     <h1>ALL-TIME LOW<span class="hero-subtitle">Our lowest MAPEx ever.</span></h1>
+     <p>EG MAPEx reached <strong>35% in October 2026</strong> — an all-time record low and a moment to celebrate together.</p>
+    </div>
+    <div class="record" aria-label="35% MAPEx in October 2026, an all-time low">
+     <div class="record-ring" aria-hidden="true"><span class="record-label">EG MAPEx</span><span class="record-number">35<span>%</span></span><span class="record-date">October 2026</span></div>
+    </div>
+   </div>
+  </div>
+ </header>
+ <div class="ribbon"><div class="wrap"><span>✦ &nbsp; A new record for EG MAPEx</span><span>October 2026 &nbsp; / &nbsp; 35%</span></div></div>
+ <section class="section" aria-labelledby="journey-heading">
+  <div class="wrap">
+   <div class="section-heading"><div><p class="section-kicker">01 &nbsp; / &nbsp; The journey</p><h2 id="journey-heading">The journey to 30%.</h2></div><p class="section-intro">A record low today, with our sights still set on the journey to 30%.</p></div>
+   <div class="overview">
+    <figure class="chart-card" aria-labelledby="chart-heading">
+     <div class="card-top"><figcaption id="chart-heading" class="card-title">The journey to 30%</figcaption><span class="card-tag">EG MAPEx</span></div>
+     <div class="chart">
+      <div class="plot">
+       <div class="scale" aria-hidden="true"><span>60%</span><span>50%</span><span>40%</span><span>30%</span></div>
+       <svg viewBox="0 0 1000 100" preserveAspectRatio="none" role="img" aria-labelledby="chart-title chart-desc">
+        <title id="chart-title">EG MAPEx trend</title>
+        <desc id="chart-desc">MAPEx was 53% in FY23/24, 54% in FY24/25, 47% in FY25/26, 43% in FY26/27 Q1, and 35% for October 2026. October is a monthly closure; the first three figures are full-year and FY26/27 is Q1. The vertical scale runs from 30% to 60%.</desc>
+        <g stroke="#e1e9e5" stroke-width="1" vector-effect="non-scaling-stroke"><line x1="0" y1="0" x2="1000" y2="0"/><line x1="0" y1="33.333" x2="1000" y2="33.333"/><line x1="0" y1="66.667" x2="1000" y2="66.667"/><line x1="0" y1="100" x2="1000" y2="100"/></g>
+        <polyline points="100,23.333 300,20 500,43.333 700,56.667" fill="none" stroke="#16756d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+        <line x1="700" y1="56.667" x2="900" y2="83.333" stroke="#d88b22" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5" vector-effect="non-scaling-stroke"/>
+       </svg>
+       <div aria-hidden="true"><span class="point" style="--x:10%;--y:23.333%"><span class="value">53%</span></span><span class="point" style="--x:30%;--y:20%"><span class="value">54%</span></span><span class="point" style="--x:50%;--y:43.333%"><span class="value">47%</span></span><span class="point" style="--x:70%;--y:56.667%"><span class="value">43%</span></span><span class="point current" style="--x:90%;--y:83.333%"><span class="value">35%</span></span></div>
+      </div>
+      <div class="periods" aria-hidden="true"><span>FY23/24</span><span>FY24/25</span><span>FY25/26</span><span class="fiscal">FY26/27</span><span class="quarter">Q1</span><span class="october">OCT '26</span></div>
+     </div>
+    </figure>
+    <section class="impact" aria-labelledby="impact-heading">
+     <div><p class="section-kicker">YTD &nbsp; / &nbsp; FY26/27</p><h3 id="impact-heading">Business impact</h3></div>
+     <div class="kpis"><div class="kpi"><strong>$64M</strong><span>Cash savings</span></div><div class="kpi"><strong>$3M</strong><span>T&amp;W cost savings</span></div></div>
+    </section>
+   </div>
+  </div>
+ </section>
+ <section class="section interventions" aria-labelledby="interventions-heading">
+  <div class="wrap">
+   <div class="section-heading"><div><p class="section-kicker">02 &nbsp; / &nbsp; How we got there</p><h2 id="interventions-heading">The work behind the win.</h2></div></div>
+   <div class="lever-grid">
+    <div class="lever"><div class="lever-number"><span>01</span><span class="lever-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m13 2-9 12h7l-1 8 9-12h-7z"/></svg></span></div><h3>Power SKUs daily sensing</h3></div>
+    <div class="lever"><div class="lever-number"><span>02</span><span class="lever-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></span></div><h3>Supply synchronization</h3></div>
+    <div class="lever"><div class="lever-number"><span>03</span><span class="lever-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span></div><h3>Rapid, clear market intel</h3></div>
+   </div>
+  </div>
+ </section>
+ <section class="thanks" aria-labelledby="thanks-heading">
+  <div class="wrap"><h2 id="thanks-heading">A big <em>thank you</em> to our BOP, DP &amp; Supply teams.</h2><p>Your effort, mastery and collaboration keep raising the bar. Let's make FY26/27 even better.</p></div>
+ </section>
+</main>
+<footer><div class="wrap"><span>EG MAPEx &nbsp; / &nbsp; FY26/27</span><span>Business Use</span></div></footer>
+</body>
+</html>
