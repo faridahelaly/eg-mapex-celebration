@@ -37,18 +37,15 @@ h1{margin-bottom:8px;color:#d4f3e5;font-size:clamp(30px,4vw,36px);font-weight:80
 .ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .ribbon span:last-child{text-align:right}
 .dashboard{background:#fbfcfb}
-.section{padding:14px 0}
-.section-heading{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:8px}
+.section{padding:15px 0}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:10px}
 .section-kicker{margin:0 0 4px;color:var(--teal);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
 h2{margin-bottom:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,3.4vw,32px);font-weight:400;line-height:1.05;letter-spacing:-.035em;color:var(--navy)}
 .section-intro{max-width:250px;margin:0;color:var(--muted);font-size:12px;line-height:1.35}
-.overview{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(205px,.85fr);gap:10px}
+.overview{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(205px,.85fr);gap:11px}
 .chart-card,.impact{border-radius:16px}
-.chart-card{min-width:0;margin:0;padding:11px;background:#fff;border:1px solid var(--line);box-shadow:0 3px 12px rgba(12,44,55,.035)}
-.card-top{display:flex;justify-content:space-between;align-items:start;gap:20px}
-.card-title{margin:0;color:var(--navy);font-size:15px;font-weight:750}
-.card-tag{padding:4px 7px;border-radius:99px;background:#edf5f0;color:var(--teal);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;text-align:right}
-.chart{margin-top:9px}
+.chart-card{min-width:0;margin:0;padding:12px;background:#fff;border:1px solid var(--line);box-shadow:0 3px 12px rgba(12,44,55,.035)}
+.chart{margin-top:0}
 .plot{position:relative;height:76px;margin:0 12px 0 30px}
 .plot svg{display:block;width:100%;height:100%;overflow:visible}
 .scale{position:absolute;top:-6px;bottom:-6px;left:-30px;display:flex;flex-direction:column;justify-content:space-between;font-size:10px;color:#536b75}
@@ -66,14 +63,13 @@ h2{margin-bottom:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2
 .kpi strong{display:block;color:#fff;font-size:27px;line-height:1;font-weight:750;letter-spacing:-.04em}
 .kpi span{display:block;margin-top:4px;color:#d6eee3;font-size:11px;line-height:1.25}
 .interventions{padding-top:0}
-.lever-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.lever{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:74px;padding:8px 10px;border:1px solid #d8e5de;border-radius:14px;background:linear-gradient(145deg,#fff,#fbfdfb);box-shadow:0 3px 10px rgba(12,44,55,.04)}
-.lever-number{display:flex;align-items:center;justify-content:space-between;color:#617b79;font-size:11px;font-weight:800;letter-spacing:.12em}
-.lever-number>span:first-child{order:2;display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#edf5f0;color:var(--teal);font-size:8px;letter-spacing:0}
-.lever-number{width:100%;font-size:9px}
-.lever-icon{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#e8f4ec;color:var(--teal)}
+.lever-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.lever{display:grid;grid-template-columns:30px minmax(0,1fr) 22px;align-items:center;gap:8px;min-height:60px;padding:8px 10px;border:1px solid #d8e5de;border-radius:14px;background:linear-gradient(145deg,#fff,#fbfdfb);box-shadow:0 3px 10px rgba(12,44,55,.04)}
+.lever-number{display:contents}
+.lever-number>span:first-child{grid-column:3;grid-row:1;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#edf5f0;color:var(--teal);font-size:8px;font-weight:800;letter-spacing:0}
+.lever-icon{grid-column:1;grid-row:1;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e8f4ec;color:var(--teal)}
 .lever-icon svg{width:16px;height:16px}
-.lever h3{margin:0;color:var(--navy);font-size:15px;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+.lever h3{grid-column:2;grid-row:1;margin:0;color:var(--navy);font-size:12.5px;font-weight:700;line-height:1.25;letter-spacing:-.01em}
 .thanks{padding:10px 0;border-top:1px solid #d7e5d9;background:#edf4ee}
 .thanks h2{max-width:none;font-size:clamp(22px,3vw,26px)}
 .thanks h2 em{color:var(--teal);font-style:italic}
@@ -93,8 +89,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  .overview{grid-template-columns:1fr;gap:8px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
  .impact{padding:10px}.kpi{min-height:48px}.kpi strong{font-size:24px}
  .lever-grid{grid-template-columns:1fr;gap:6px}
- .lever{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;min-height:50px;padding:7px 9px}
- .lever-number{display:contents}.lever-icon{grid-column:1;grid-row:1;width:34px;height:34px;flex-basis:34px}.lever h3{grid-column:2;grid-row:1;font-size:15px}.lever-number>span:first-child{grid-column:3;grid-row:1}
+ .lever{grid-template-columns:34px minmax(0,1fr) 22px;gap:9px;min-height:54px;padding:7px 9px}
+ .lever-icon{width:34px;height:34px}
  .thanks{padding:10px 0}
 }
 @media(max-width:600px){
@@ -102,10 +98,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  .wrap{width:calc(100% - 32px)}.topbar{min-height:0;flex-wrap:wrap;gap:6px;padding:7px 0;font-size:9px}.brand-mark{width:25px;height:25px}.topbar-meta{flex:0 1 auto;max-width:100%;margin-left:auto;text-align:right;line-height:1.25}
  .hero-body{gap:8px;padding:12px 0}h1{max-width:100%;font-size:clamp(25px,7vw,30px);overflow-wrap:anywhere}.hero-subtitle{font-size:clamp(22px,6vw,26px)}.hero-copy>p:last-child{font-size:12px}.record-ring{width:146px;height:146px;border-width:5px;gap:4px}.record-label{font-size:11px}.record-number{font-size:60px}.record-date{font-size:9px}
  .ribbon .wrap{flex-wrap:wrap;justify-content:center;font-size:9px;line-height:1.4;text-align:center}.ribbon span:last-child{text-align:center}
- .section{padding:10px 0}.interventions{padding-top:0}h2{font-size:17px}.impact h3{font-size:15px}
+ .section{padding:12px 0}.interventions{padding-top:2px}h2{font-size:17px}.impact h3{font-size:15px}
  .section-heading{display:block;margin-bottom:7px}.section-intro{max-width:none;margin-top:5px;font-size:9px}
- .chart-card,.impact{padding:10px}.card-title{font-size:11px}.chart{margin-top:8px}.plot{height:78px;margin-right:8px}.periods{margin-right:8px;font-size:8px}.periods .october{font-size:8px}.point .value{font-size:9px}.point.current .value{font-size:11px}
- .lever{grid-template-columns:30px minmax(0,1fr) auto;gap:7px;min-height:46px;padding:6px 8px}.lever-icon{width:30px;height:30px;flex-basis:30px}.lever h3{font-size:12.5px;line-height:1.15}
+ .chart-card,.impact{padding:11px}.chart{margin-top:0}.plot{height:78px;margin-right:8px}.periods{margin-right:8px;font-size:8px}.periods .october{font-size:8px}.point .value{font-size:9px}.point.current .value{font-size:11px}
+ .lever{grid-template-columns:30px minmax(0,1fr) 22px;gap:7px;min-height:50px;padding:6px 8px}.lever-icon{width:30px;height:30px}.lever h3{font-size:12px;line-height:1.2}
  .thanks{padding:8px 0}.thanks h2{font-size:16px}
 }
 @media(max-width:360px){.topbar-meta{max-width:none}.chart-card{padding-right:8px;padding-left:8px}.periods{font-size:8px}.kpi strong{font-size:22px}}
@@ -117,32 +113,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  .record-label{font-size:11px}.record-number{font-size:64px}.record-date{font-size:9px}
  .hero-copy>p:last-child{font-size:12px}
  .ribbon .wrap{padding:7px 0;font-size:8px}
- .section{padding:8px 0}
- .section-heading{margin-bottom:6px}
- .section-kicker{margin-bottom:3px;font-size:8px}
- h2{font-size:18px;line-height:1.05}
+ .section{padding:10px 0}
+ .section-heading{margin-bottom:8px}
+ .section-kicker{margin-bottom:4px;font-size:9px}
+ h2{font-size:19px;line-height:1.05}
  .section-intro{font-size:9px;line-height:1.25}
- .overview{gap:8px}
- .chart-card{padding:9px}.card-title{font-size:10px}
- .card-tag{font-size:7px}
- .chart{margin-top:6px}.plot{height:70px;margin-right:8px;margin-left:26px}
+ .overview{gap:9px}
+ .chart-card{padding:10px}
+ .chart{margin-top:0}.plot{height:76px;margin-right:8px;margin-left:26px}
  .scale{left:-26px;font-size:9px}
  .point .value{bottom:9px;font-size:9px}
  .point.current{width:25px;height:25px}.point.current:before{font-size:25px;line-height:25px}
  .point.current .value{bottom:23px;font-size:12px}
- .periods{margin:6px 8px 0 26px;font-size:8px}.periods .october{font-size:9px}
+ .periods{margin:8px 8px 0 26px;font-size:8.5px}.periods .october{font-size:9px}
  .impact{padding:9px}
  .impact .section-kicker{margin-bottom:5px;padding:3px 6px;font-size:8px}
  .impact h3{font-size:15px}
  .kpis{gap:4px;margin-top:5px}
  .kpi{min-height:38px;padding:5px 7px}
  .kpi strong{font-size:18px}.kpi span{margin-top:2px;font-size:9px}
- .interventions{padding-bottom:6px}
- .lever-grid{gap:5px}
- .lever{min-height:60px;padding:6px 8px;gap:4px}
- .lever-number{font-size:8px}
+ .interventions{padding-top:2px;padding-bottom:8px}
+ .lever-grid{gap:7px}
+ .lever{min-height:56px;padding:7px 8px;gap:7px}
  .lever-icon{width:27px;height:27px;flex-basis:27px}
- .lever h3{font-size:12.5px;line-height:1.15}
+ .lever h3{font-size:12px;line-height:1.2}
  .thanks{padding:7px 0}
  .thanks h2{font-size:16px}
  .thanks p{margin:3px 0 0;font-size:9px;line-height:1.2}
@@ -177,8 +171,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
   <div class="wrap">
    <div class="section-heading"><div><p class="section-kicker">01 &nbsp; / &nbsp; The journey</p><h2 id="journey-heading">The journey to 30%.</h2></div><p class="section-intro">A record low today, with our sights still set on the journey to 30%.</p></div>
    <div class="overview">
-    <figure class="chart-card" aria-labelledby="chart-heading">
-     <div class="card-top"><figcaption id="chart-heading" class="card-title">The journey to 30%</figcaption><span class="card-tag">EG MAPEx</span></div>
+    <figure class="chart-card" aria-label="MAPEx trend by fiscal year and October 2026">
      <div class="chart">
       <div class="plot">
        <div class="scale" aria-hidden="true"><span>60%</span><span>50%</span><span>40%</span><span>30%</span></div>
