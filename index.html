@@ -27,10 +27,10 @@ h1{margin-bottom:14px;color:#d4f3e5;font-size:clamp(34px,4.2vw,56px);font-weight
 .hero-copy>p:last-child{max-width:475px;margin:0;color:#d4e5e2;font-size:16px;line-height:1.5}
 .hero-copy strong{color:#fff}
 .record{position:relative;display:flex;align-items:center;justify-content:center;min-height:270px}
-.record-ring{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:260px;height:260px;border:8px solid var(--gold);border-radius:50%;background:radial-gradient(circle,#1d766e,#0d4c50 70%);box-shadow:0 0 0 8px #d5f4df1a,0 18px 56px #001c2860;text-align:center}
+.record-ring{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:260px;height:260px;border:8px solid var(--gold);border-radius:50%;background:radial-gradient(circle,#1d766e,#0d4c50 70%);box-shadow:0 0 0 8px #d5f4df1a,0 18px 56px #001c2860;text-align:center}
 .record-label{font-size:18px;font-weight:800;letter-spacing:.1em;color:#d3f0e2;text-transform:uppercase}
-.record-number{font-size:clamp(96px,9vw,124px);font-weight:800;line-height:.9;letter-spacing:-.06em;color:#fff}
-.record-number span{margin-left:3px;font-size:.43em;letter-spacing:-.04em;color:var(--mint)}
+.record-number{display:flex;align-items:center;justify-content:center;gap:3px;font-size:clamp(88px,8vw,112px);font-weight:800;line-height:1;letter-spacing:-.06em;color:#fff}
+.record-number span{font-size:.43em;letter-spacing:-.04em;color:var(--mint)}
 .record-date{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e5f4ed}
 .ribbon{background:var(--gold);color:#243a36}
 .ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
@@ -80,7 +80,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:25px 0;
 @media(max-width:800px){
  .wrap{width:min(100% - 48px,1180px)}
  .hero-body{gap:16px;min-height:0;padding:28px 0}
- .record-ring{width:220px;height:220px;gap:10px}.record-label{font-size:16px}.record-number{font-size:92px}
+ .record-ring{width:220px;height:220px;gap:10px}.record-label{font-size:16px}.record-number{font-size:84px}
  .section{padding:42px 0}.interventions{padding-top:0}
  .overview{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}
  .lever{min-height:128px;padding:18px}.lever h3{font-size:20px}
@@ -88,7 +88,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:25px 0;
 @media(max-width:600px){
  body{padding:8px}.announcement-frame{border-radius:12px}
  .wrap{width:calc(100% - 40px)}.topbar{min-height:58px;font-size:10px}.brand-mark{width:30px;height:30px}
- .hero-body{grid-template-columns:1fr;gap:16px;padding:24px 0 22px}h1{font-size:clamp(32px,8vw,42px)}.hero-subtitle{font-size:clamp(28px,7vw,34px)}.hero-copy>p:last-child{font-size:15px}.record{min-height:0}.record-ring{width:210px;height:210px;border-width:7px;gap:8px}.record-label{font-size:15px}.record-number{font-size:84px}.record-date{font-size:11px}
+ .hero-body{grid-template-columns:1fr;gap:16px;padding:24px 0 22px}h1{font-size:clamp(32px,8vw,42px)}.hero-subtitle{font-size:clamp(28px,7vw,34px)}.hero-copy>p:last-child{font-size:15px}.record{min-height:0}.record-ring{width:210px;height:210px;border-width:7px;gap:8px}.record-label{font-size:15px}.record-number{font-size:80px}.record-date{font-size:11px}
  .ribbon .wrap{font-size:10px;line-height:1.5}.section{padding:32px 0}.interventions{padding-top:0}
  .section-heading{display:block;margin-bottom:16px}.section-intro{margin-top:10px}
  .chart-card,.impact{padding:16px 14px}.chart{margin-top:24px}.plot{height:120px;margin-right:10px}.periods{margin-right:10px;font-size:10px}.periods .october{font-size:11px}.point .value{font-size:14px}.point.current .value{font-size:18px}
