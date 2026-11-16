@@ -69,11 +69,11 @@ h2{margin-bottom:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2
 .lever-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .lever{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:74px;padding:8px 10px;border:1px solid #d8e5de;border-radius:14px;background:linear-gradient(145deg,#fff,#fbfdfb);box-shadow:0 3px 10px rgba(12,44,55,.04)}
 .lever-number{display:flex;align-items:center;justify-content:space-between;color:#617b79;font-size:11px;font-weight:800;letter-spacing:.12em}
-.lever-number>span:first-child{order:2}
+.lever-number>span:first-child{order:2;display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#edf5f0;color:var(--teal);font-size:8px;letter-spacing:0}
 .lever-number{width:100%;font-size:9px}
 .lever-icon{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#e8f4ec;color:var(--teal)}
 .lever-icon svg{width:16px;height:16px}
-.lever h3{margin:0;color:var(--navy);font-size:15px;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.lever h3{margin:0;color:var(--navy);font-size:15px;font-weight:700;line-height:1.15;letter-spacing:-.01em}
 .thanks{padding:10px 0;border-top:1px solid #d7e5d9;background:#edf4ee}
 .thanks h2{max-width:none;font-size:clamp(22px,3vw,26px)}
 .thanks h2 em{color:var(--teal);font-style:italic}
@@ -105,7 +105,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  .section{padding:10px 0}.interventions{padding-top:0}h2{font-size:17px}.impact h3{font-size:15px}
  .section-heading{display:block;margin-bottom:7px}.section-intro{max-width:none;margin-top:5px;font-size:9px}
  .chart-card,.impact{padding:10px}.card-title{font-size:11px}.chart{margin-top:8px}.plot{height:78px;margin-right:8px}.periods{margin-right:8px;font-size:8px}.periods .october{font-size:8px}.point .value{font-size:9px}.point.current .value{font-size:11px}
- .lever{grid-template-columns:30px minmax(0,1fr) auto;gap:7px;min-height:46px;padding:6px 8px}.lever-icon{width:30px;height:30px;flex-basis:30px}.lever h3{font-size:11px}
+ .lever{grid-template-columns:30px minmax(0,1fr) auto;gap:7px;min-height:46px;padding:6px 8px}.lever-icon{width:30px;height:30px;flex-basis:30px}.lever h3{font-size:12.5px;line-height:1.15}
  .thanks{padding:8px 0}.thanks h2{font-size:16px}
 }
 @media(max-width:360px){.topbar-meta{max-width:none}.chart-card{padding-right:8px;padding-left:8px}.periods{font-size:8px}.kpi strong{font-size:22px}}
@@ -139,9 +139,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  .kpi strong{font-size:18px}.kpi span{margin-top:2px;font-size:9px}
  .interventions{padding-bottom:6px}
  .lever-grid{gap:5px}
- .lever{min-height:46px;padding:6px 8px}
- .lever-icon{width:29px;height:29px;flex-basis:29px}
- .lever h3{font-size:11px}
+ .lever{min-height:60px;padding:6px 8px;gap:4px}
+ .lever-number{font-size:8px}
+ .lever-icon{width:27px;height:27px;flex-basis:27px}
+ .lever h3{font-size:12.5px;line-height:1.15}
  .thanks{padding:7px 0}
  .thanks h2{font-size:16px}
  .thanks p{margin:3px 0 0;font-size:9px;line-height:1.2}
