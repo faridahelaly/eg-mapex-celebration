@@ -76,6 +76,45 @@ h2{margin-bottom:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3
 .thanks p{margin:18px 0 0;color:#506c66;font-size:15px;line-height:1.6}
 footer{background:var(--deep);color:#b9d0ce}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:25px 0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media(min-width:1000px){
+ .topbar{min-height:48px;font-size:10px}.brand-mark{width:28px;height:28px}
+ .hero-body{min-height:0;gap:20px;padding:14px 0}
+ h1{margin-bottom:8px;font-size:clamp(34px,3vw,42px);line-height:1.04}
+ .hero-subtitle{margin-top:5px;font-size:clamp(30px,2.4vw,34px)}
+ .hero-copy>p:last-child{font-size:13px;line-height:1.35}
+ .record{min-height:200px}.record-ring{width:190px;height:190px;gap:5px;border-width:6px;box-shadow:0 0 0 6px #d5f4df1a,0 12px 36px #001c2860}
+ .record-label{font-size:14px}.record-number{font-size:82px}.record-date{font-size:10px}
+ .ribbon .wrap{padding:7px 0;font-size:10px}
+ .dashboard{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,.85fr);align-items:start;gap:24px;width:min(1180px,calc(100% - 80px));margin:auto;padding:16px 0}
+ .dashboard>.section{padding:0}.dashboard .wrap{width:auto;margin:0}
+ .dashboard .section-heading{display:block;margin-bottom:12px}
+ .dashboard .section-kicker{margin-bottom:6px;font-size:9px}
+ .journey h2,.interventions h2{font-size:clamp(27px,2.7vw,34px)}
+ .journey .section-intro{max-width:none;margin-top:5px;font-size:12px;line-height:1.3}
+ .overview{grid-template-columns:minmax(0,1.55fr) minmax(210px,.85fr);gap:12px}
+ .chart-card,.impact{padding:14px;border-radius:12px}
+ .card-title{font-size:16px}.card-tag{font-size:9px}
+ .chart{margin-top:16px}.plot{height:100px;margin-right:10px;margin-left:30px}
+ .scale{left:-30px;font-size:10px}
+ .point .value{font-size:13px}
+ .point.current{width:32px;height:32px}.point.current:before{font-size:32px;line-height:32px}
+ .point.current .value{bottom:30px;font-size:16px}
+ .periods{margin:14px 10px 0 30px;font-size:10px}.periods .october{font-size:11px}
+ .impact .section-kicker{margin-bottom:8px;padding:5px 8px}
+ .impact h3{font-size:23px}
+ .kpis{gap:6px;margin-top:10px}
+ .kpi{min-height:57px;padding:8px 10px;border-radius:8px}
+ .kpi strong{font-size:28px}.kpi span{margin-top:4px;font-size:11px}
+ .interventions .section-heading{margin-bottom:12px}
+ .lever-grid{grid-template-columns:1fr;gap:6px}
+ .lever{display:grid;grid-template-columns:30px minmax(0,1fr) 20px;align-items:center;gap:8px;min-height:0;padding:8px 10px;border-radius:10px}
+ .lever-number{display:contents}.lever-icon{grid-column:1;grid-row:1;width:30px;height:30px;flex-basis:30px;border-radius:8px}
+ .lever-icon svg{width:16px;height:16px}.lever h3{grid-column:2;grid-row:1;font-size:14px;line-height:1.2}
+ .lever-number>span:first-child{grid-column:3;grid-row:1;font-size:9px}
+ .thanks{padding:12px 0}.thanks h2{max-width:none;font-size:22px}
+ .thanks p{margin:4px 0 0;font-size:12px;line-height:1.3}
+ footer .wrap{padding:8px 0;font-size:9px}
+}
 @media(max-width:800px){
  .wrap{width:min(100% - 48px,1180px)}
  .hero-body{gap:16px;min-height:0;padding:28px 0}
@@ -117,7 +156,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:25px 0;
   </div>
  </header>
  <div class="ribbon"><div class="wrap"><span>✦ &nbsp; A new record for EG MAPEx</span><span>October 2026 &nbsp; / &nbsp; 35%</span></div></div>
- <section class="section" aria-labelledby="journey-heading">
+ <div class="dashboard">
+ <section class="section journey" aria-labelledby="journey-heading">
   <div class="wrap">
    <div class="section-heading"><div><p class="section-kicker">01 &nbsp; / &nbsp; The journey</p><h2 id="journey-heading">The journey to 30%.</h2></div><p class="section-intro">A record low today, with our sights still set on the journey to 30%.</p></div>
    <div class="overview">
@@ -155,6 +195,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:25px 0;
    </div>
   </div>
  </section>
+ </div>
  <section class="thanks" aria-labelledby="thanks-heading">
   <div class="wrap"><h2 id="thanks-heading">A big <em>thank you</em> to our BOP, DP &amp; Supply teams.</h2><p>Your effort, mastery and collaboration keep raising the bar. Let's make FY26/27 even better.</p></div>
  </section>
