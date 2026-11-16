@@ -11,7 +11,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;padding:20px;background:#fff;color:var(--ink);font-family:"Aptos","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 main{overflow:hidden}
-.announcement-frame{max-width:700px;margin:0 auto;overflow:hidden;border:1px solid #d9e3dd;border-radius:18px;background:#fff;box-shadow:0 16px 38px rgba(7,28,44,.16)}
+.announcement-frame{max-width:700px;margin:0 auto;overflow:hidden;border:1px solid #d9e3dd;border-radius:18px;background:#fff;box-shadow:10px 12px 24px rgba(7,28,44,.12),0 12px 30px rgba(7,28,44,.1)}
 .wrap{width:min(640px,calc(100% - 48px));margin:auto}
 .hero{position:relative;overflow:hidden;background:var(--deep);color:#fff}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 82% 48%,#155c5b 0,transparent 42%),linear-gradient(115deg,#061e30 10%,#0b3748 100%);pointer-events:none}
@@ -54,8 +54,8 @@ h2{margin-bottom:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2
 .point.current{width:28px;height:28px;border:0;background:transparent;box-shadow:none}
 .point.current:before{content:"★";display:block;color:#c5740e;font-size:28px;line-height:28px;text-shadow:0 1px 3px #fff}
 .point.current .value{bottom:27px;color:#9c5700;font-size:15px}
-.periods{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto auto;margin:8px 10px 0 30px;text-align:center;font-size:10px;font-weight:700;line-height:1.3;color:#536b75}
-.periods span{min-width:0}.periods .fiscal{grid-column:4 / 6;grid-row:1}.periods .quarter{grid-column:4;grid-row:2;margin-top:3px}.periods .october{grid-column:5;grid-row:2;margin-top:3px;color:#9c5700;font-size:10px;font-weight:800;white-space:nowrap}
+.periods{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto auto;row-gap:3px;margin:8px 10px 0 30px;text-align:center;font-size:10px;font-weight:700;line-height:1.3;color:#536b75}
+.periods span{min-width:0}.periods span:nth-child(-n+3){grid-row:2}.periods .fiscal{grid-column:4 / 6;grid-row:2;color:var(--navy);font-weight:800}.periods .quarter{grid-column:4;grid-row:1}.periods .october{grid-column:5;grid-row:1;color:#9c5700;font-size:10px;font-weight:800;white-space:nowrap}
 .impact{display:flex;flex-direction:column;padding:11px;border:1px solid #0a554c;border-radius:16px;background:linear-gradient(145deg,#12695d,#0b554c);color:white}
 .impact .section-kicker{display:inline-block;margin-bottom:7px;padding:4px 7px;border:1px solid #b9e8d45c;border-radius:99px;color:#d7f2e4}.impact h3{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:21px;font-weight:400}
 .kpis{display:grid;gap:5px;margin-top:8px}
@@ -167,9 +167,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  </header>
  <div class="ribbon"><div class="wrap"><span>✦ &nbsp; A new record for EG MAPEx</span><span>October 2026 &nbsp; / &nbsp; 35%</span></div></div>
  <div class="dashboard">
- <section class="section journey" aria-labelledby="journey-heading">
+ <section class="section journey" aria-label="MAPEx trend and business impact">
   <div class="wrap">
-   <div class="section-heading"><div><p class="section-kicker">01 &nbsp; / &nbsp; The journey</p><h2 id="journey-heading">The journey to 30%.</h2></div><p class="section-intro">A record low today, with our sights still set on the journey to 30%.</p></div>
+   <div class="section-heading"><div><h2 id="journey-heading">The journey to 30%.</h2></div><p class="section-intro">A record low today, with our sights still set on the journey to 30%.</p></div>
    <div class="overview">
     <figure class="chart-card" aria-label="MAPEx trend by fiscal year and October 2026">
      <div class="chart">
@@ -196,7 +196,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;padding:8px 0;f
  </section>
  <section class="section interventions" aria-labelledby="interventions-heading">
   <div class="wrap">
-   <div class="section-heading"><div><p class="section-kicker">02 &nbsp; / &nbsp; How we got there</p><h2 id="interventions-heading">Key interventions</h2></div></div>
+   <div class="section-heading"><div><h2 id="interventions-heading">Key interventions</h2></div></div>
    <div class="lever-grid">
     <div class="lever"><div class="lever-number"><span>01</span><span class="lever-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m13 2-9 12h7l-1 8 9-12h-7z"/></svg></span></div><h3>Power SKUs daily sensing</h3></div>
     <div class="lever"><div class="lever-number"><span>02</span><span class="lever-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></span></div><h3>Supply synchronization</h3></div>
